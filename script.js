@@ -140,6 +140,7 @@ function play(){
           useCoin.innerText = "Use Coin";
         } else {
           resultMessage.textContent = "Congratulations! You finished all levels";
+          useCoin.style.display = 'none';
           
         }
     } else {
