@@ -97,7 +97,7 @@ function Hint(){
 function Help() {
   
   if (gold >= 10) {
-    coinText.textContent = ` ${gold -= 10}`;
+    coinText.textContent = ` ${gold -= 50}`;
     useCoin.innerText = levels[currentLevel].answer;
   } else{
     useCoin.innerText = "Use Coin";
@@ -127,7 +127,7 @@ function play(){
   loadLevel(currentLevel);
 
   function checkGuess() {
-    const guess = userInput.value.toLowerCase();
+    const guess = userInput.value.toLowerCase().trim();
   
     if (guess === levels[currentLevel].answer) {
 
