@@ -13,6 +13,10 @@ const gameContainer = document.getElementById('gameContainer');
 const hint = document.getElementById('hint');
 const userInput = document.getElementById('userInput');
 const coinText = document.getElementById('coinText');
+const backgroundAudio = document.getElementById('backgroundAudio');
+const homegroundAudio = document.getElementById('homegroundAudio');
+const endAudio = document.getElementById('endAudio');
+
 
 
 const levels = [
@@ -80,6 +84,7 @@ const levels = [
 button1.onclick = play;
 hint.onclick = Hint;
 useCoin.onclick = Help;
+homeAudio.play();
 
 function Home() {
   button1.innerText = "Play";
@@ -87,6 +92,7 @@ function Home() {
   home.style.display = "block";
   gameContainer.style.display = "none";
   input.style.display = "none";
+   backgroundAudio.pause();
 }
 
 function Hint(){
@@ -110,6 +116,8 @@ function play(){
   home.style.display = "none";
   gameContainer.style.display = "block";
   input.style.display = "block";
+   backgroundAudio.play();
+
   
   function loadLevel(level) {
     
@@ -141,7 +149,8 @@ function play(){
         } else {
           resultMessage.textContent = "Congratulations! You finished all levels";
           useCoin.style.display = 'none';
-          
+          backgroundAudio.pause();
+          endAudio.play();
         }
     } else {
       resultMessage.textContent = "";
