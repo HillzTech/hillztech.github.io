@@ -100,11 +100,6 @@ const levels = [
     hint: "7 Letters"
   },
   {
-    images: ["Aves/aves.jpeg", "Aves/aves2.jpeg", "Aves/aves3.jpeg", "Aves/aves4.jpeg"],
-    answer: "aves",
-    hint: "4 Letters"
-  },
-  {
     images: ["France/france.jpeg", "France/france2.jpeg", "France/france3.jpeg", "France/france4.jpeg"],
     answer: "france",
     hint: "6 Letters"
