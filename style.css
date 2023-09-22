@@ -15,7 +15,7 @@ body {
 }
 
 button {
-    background-color: rgb(39, 37, 56);
+    background-color: rgb(29, 22, 22);
     color: white;
     font-size: 17px;
 }
@@ -85,7 +85,9 @@ div .stats {
    padding: 8px;
   
   }
-  
+  input#userInput {
+    padding: 5px;
+  }
   
   #resultMessage {
     font-weight: bold;
