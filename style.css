@@ -86,7 +86,7 @@ div .stats {
   
   }
   input#userInput {
-    padding: 5px;
+    padding: 5px 0;
   }
   
   #resultMessage {
