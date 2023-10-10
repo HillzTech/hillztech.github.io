@@ -146,57 +146,81 @@ function Begin() {
   adPage.style.display = "none";
   freeCoin.style.display = "none";
 
-  function loadLevel(level) {
-    
-    gameContainer.innerHTML = '';
-  
-    for (const image of levels[level].images) {
-        const img = document.createElement('img');
-        img.src = `${image}`;
-        gameContainer.appendChild(img);
-        
-
-    }
-    
-    levelText.textContent = ` ${currentLevel + 1}`;
+   function loadPlayerData() {
+      // Load player's current level and gold from local storage
+      const savedLevel = localStorage.getItem('currentLevel');
+      const savedGold = localStorage.getItem('currentGold');
+      currentLevel = savedLevel ? parseInt(savedLevel) : 0;
+      gold = savedGold ? parseInt(savedGold) : 0;
+      coinText.textContent = ` ${gold}`;
   }
-  loadLevel(currentLevel);
-
+  
+  function savePlayerData() {
+      // Save current level and gold to local storage
+      localStorage.setItem('currentLevel', currentLevel);
+      localStorage.setItem('currentGold', gold);
+  }
+  
+  function loadLevel(level) {
+      // Save current level to local storage and update UI
+      savePlayerData();
+      gameContainer.innerHTML = '';
+  
+      for (const image of levels[level].images) {
+          const img = document.createElement('img');
+          img.src = `${image}`;
+          gameContainer.appendChild(img);
+      }
+  
+      levelText.textContent = ` ${level + 1}`;
+  }
+  
   function checkGuess() {
-    const guess = userInput.value.toLowerCase().trim();
+      const guess = userInput.value.toLowerCase().trim();
   
+      if (guess === levels[currentLevel].answer) {
+          correctAudio.play();
+          errorAudio.pause();
+          gold += 50;
+          currentLevel++;
   
-    if (guess === levels[currentLevel].answer) {
-        correctAudio.play();
-        currentLevel++;
-        coinText.textContent = ` ${gold += 5}`;
-        hintMsg.textContent = "";
-        
-        if (currentLevel < levels.length) {
-          
-          loadLevel(currentLevel);
-         
-        } else {
-          resultMessage.textContent = "Congratulations! You finished all levels";
-          useCoin.style.display = 'none';
-          backgroundAudio.pause();
-          endAudio.play();
-          button1.innerText = "Restart";
-          button1.onclick = restart;
-          
-        }
-    } else {
-      resultMessage.textContent = "";
-    
-    }
+          if (currentLevel < levels.length) {
+              loadLevel(currentLevel);
+              coinText.textContent = ` ${gold}`;
+              hintMsg.textContent = "";
+              resultMsg.textContent = "";
+          } else {
+              resultMessage.textContent = "Congratulations! You finished all levels";
+              useCoin.style.display = 'none';
+              backgroundAudio.pause();
+              endAudio.play();
+              button1.innerText = "Restart";
+              button1.onclick = restart;
+          }
+      } else {
+          resultMessage.textContent = "";
+      }
   
-    userInput.value = '';
-  
+      userInput.value = '';
+      savePlayerData();
   }
   
   checkButton.addEventListener('click', checkGuess);
- 
-}
+  
+  // Load player data and current level on page load
+  let currentLevel = 0;
+  let gold = 0;
+  loadPlayerData();
+  loadLevel(currentLevel);
+  
+
+  
+  
+  
+  
+  
+   
+  }
 
 
 function Free() {
