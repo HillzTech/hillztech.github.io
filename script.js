@@ -178,7 +178,7 @@ function loadLevel(level) {
   const allLetters = [...levels[level].answer.toUpperCase()];
 
   // Add additional random letters
-  const additionalLettersNeeded = 10 - levels[level].answer.toUpperCase().length; 
+  const additionalLettersNeeded = 8 - levels[level].answer.toUpperCase().length; 
   for (let i = 0; i < additionalLettersNeeded; i++) {
     allLetters.push(getRandomLetter());
   }
