@@ -232,7 +232,7 @@ function checkGuess() {
       const letterContainer = document.getElementById('letter-container');
       letterContainer.innerHTML = ''; // Clear existing letters
       const allLetters = [...levels[currentLevel].answer.toUpperCase()];
-      const additionalLettersNeeded = 10 - levels[currentLevel].answer.toUpperCase().length; 
+      const additionalLettersNeeded = 8 - levels[currentLevel].answer.toUpperCase().length; 
       for (let i = 0; i < additionalLettersNeeded; i++) {
         allLetters.push(getRandomLetter());
       }
