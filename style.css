@@ -368,13 +368,13 @@ h4 {
   list-style: none;
   padding: 0;
   justify-content: center;
-  gap: 3px;
+  gap: 4px;
   padding-top: 1.5em;
 }
 
 .letter {
   display: inline-block;
-  padding: 10px;
+  padding: 12px;
   margin: 1px;
   background-color: #ffffff;
   cursor: pointer;
