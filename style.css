@@ -1,5 +1,5 @@
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   background: linear-gradient(to top, rgb(51, 59, 3), rgb(15, 15, 15));
   border-radius: 20px;
   height: auto;
