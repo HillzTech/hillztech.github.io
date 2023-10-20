@@ -230,7 +230,7 @@ button {
   background: rgb(255, 255, 255);
   border-radius: 10px;
   color: rgb(73, 19, 19);
-  margin-top: 3.5em;
+  margin-top: 4em;
   font-weight: 900;
   font-size: 20px;
    
@@ -365,7 +365,7 @@ h4 {
   list-style: none;
   padding: 0;
   justify-content: space-around;
-  padding-top: 1em;
+  padding-top: 1.5em;
 }
 
 .letter {
@@ -403,8 +403,8 @@ h4 {
   margin-top: 1.5em;
   background-color: rgb(3, 44, 3);
   border-radius: 20px;
-  margin-left: -10px;
-  height: 130px;
+  margin-left: -15px;
+  height: 150px;
   width: 370px;
 
 
