@@ -1,0 +1,411 @@
+body {
+  overflow-x: hidden;
+  background: linear-gradient(to top, rgb(51, 59, 3), rgb(15, 15, 15));
+  border-radius: 20px;
+  height: auto;
+}
+#statistics {
+  display: none;
+}
+
+#game {
+    max-width: 600px;
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+    min-height: "700px";
+    
+}
+#info {
+  display: none;
+  background: rgb(54, 1, 1);
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-top: 1em;
+  padding: 10px;
+  color: rgb(223, 223, 223);
+}
+button {
+    background-color: rgb(54, 1, 1);
+    color: rgb(226, 226, 226);
+    font-size: 18px;
+    border: 1px solid rgb(3, 3, 3);
+    border-radius: 3px;
+    padding: 6px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#button3 {
+  float: right;
+}
+#controls {
+    border-radius: 9px;
+    border: 3px solid rgb(233, 233, 233);
+    padding: 12px;
+    margin-top: 1em;
+    
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space between;
+  margin-top: 5px;
+}
+
+
+#getCoin {
+  display: none;
+  background: #d8d8d8;
+  margin-top: 2em;
+  border-radius: 10px;
+  padding-bottom: 1px;
+  
+}
+ .Adbtn {
+  background-image: url(./Images/dv_7rjw.1280.webp);
+  max-width: 100%;
+  max-height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5em;
+  margin-top: 47px;
+ }
+ span.admessage {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  
+ }
+
+.stat img {
+  margin-bottom: -8px;
+  width: 30px;
+  height: 30px;
+}
+
+#levelImg {
+  display: block;
+   position: relative;
+   top: -1em;
+}
+#levelText {
+  display: block;
+  position: relative;
+  top: -2.5em;
+  color: rgb(22, 10, 77);
+  font-weight: 900;
+  font-size: 20px;
+  
+}
+  #home{
+    margin-top: 1em;
+    display: block;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+ .proton {
+  margin-top: 6em;
+  width: 100px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  left: -1.3em;
+ 
+ }
+  .electron{
+    width: 15%;
+    height: 15%; 
+    position: relative;
+    animation: rotation 2s infinite linear;
+    border-radius: 50%;
+    padding: 5px;
+    left: 35%;
+    top: -11.3em;
+    transform: translate(-50%, -50%);
+  }
+  .electron::before {
+      content: '';
+      width: 1px;
+      height: 1px;
+      background-color: rgb(34, 39, 0);
+      position: absolute;
+      left: -15em;
+      top: -10em;
+      border-radius: 50%;
+      
+      
+  }
+  @keyframes rotation {
+    0% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+        
+    }
+}
+.ribbon{
+  width: 250px;
+  margin-top: 2.1em;
+  margin-left: -5px;
+  
+}
+
+
+  #home h2{
+    color: rgb(235, 235, 235);
+    text-align: center;
+    margin-top: -0.5em;
+    font-size: 35px;
+  }
+  #gameContainer{
+    display: none;
+    display: grid;
+    grid-template-columns:150px 150px ;
+    grid-template-rows: 150px 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    margin-top: 1.5em;
+    
+  }
+  /**Dictionary***/
+  #dictionary {
+    display: none;
+    padding: 1em 2em;
+    border: 2px solid white;
+    margin-top: 1em;
+    border-radius: 20px;
+    height: 400px;
+  }
+  #wordInput {
+    background: rgb(255, 255, 255);
+    padding: 7px;
+    border: black;
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+  }
+  #searchButton {
+    font-size: 13px;
+  }
+  
+  #results {
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    margin-top: 1em;
+    border-radius: 10px;
+    padding-top: 1em;
+    padding-bottom: 4em;
+    padding-left: 17px;
+    padding-right: 2px;
+    font-size: 18px;
+  
+  }
+
+
+
+  #gameContainer img{
+    width: 150px;
+    height: 160px;
+    border-radius: 5px;
+    
+    
+  }
+  #input {
+   display: none;
+   margin-left: auto;
+   margin-right: auto;
+   width: 355px;
+   margin-top: 2em;
+ 
+  }
+ 
+ 
+
+  #useCoin {
+   position: relative;
+   top: -3em;
+   padding: 5px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  color: rgb(73, 19, 19);
+  margin-top: 3.5em;
+  font-weight: 900;
+  font-size: 20px;
+   
+  }
+
+  #hint {
+    position: relative;
+    top: -3em;
+    right: 1em;
+    padding: 10px;
+  }
+  #hintMsg {
+    font-weight: bold;
+    margin-top: -1.5em;
+    margin-bottom: -5px;
+    color: rgb(175, 150, 4);;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+   
+  
+  #resultMessage {
+    font-weight: bold;
+    margin-top:9px;
+    margin-bottom: -0.1px;
+   
+  }
+ 
+  #mainContainer {
+    display: none;
+    position: relative;
+    width: 640px;
+    height: 360px;
+  }
+  
+  #content, #adContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 640px;
+    height: 360px;
+  }
+  
+  #contentElement {
+    width: 640px;
+    height: 360px;
+    overflow: hidden;
+  }
+  
+  #playButton {
+    display: none;
+    margin-top:-10px;
+    vertical-align: top;
+    width: 350px;
+    height: 60px;
+    padding: 0;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #2c3e50;
+    border: 0;
+    border-bottom: 2px solid #22303f;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #22303f;
+    box-shadow: inset 0 -2px #22303f;
+    float: left;
+  }
+  
+
+  .testing {
+    display: none;
+  }
+ #adPage {
+  display: none;
+ }
+ #score {
+  display: none;
+  
+}
+
+ .slogan {
+  display: block;
+  position: relative;
+  top: -1.8em;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 29px;
+  line-height: 23px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: none;
+  border: none;
+  animation: wobble 1s;
+  text-shadow: 5px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+ 
+@keyframes wobble {
+  0%, 100% {
+      transform: translateX(0);
+  }
+  15%, 45%, 75% {
+      transform: translateX(-10px) rotate(-5deg);
+  }
+  30%, 60% {
+      transform: translateX(10px) rotate(5deg);
+  }
+}
+
+#advertPage{
+  display: none;
+}
+
+#watchNow {
+  display: block;
+  background: rgb(87, 86, 86);
+  width: 300px;
+  height: 260px;
+  color: rgb(255, 255, 255);
+ 
+}
+h4 {
+  margin-top: 3em;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+.letter-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  justify-content: space-around;
+  padding-top: 1em;
+}
+
+.letter {
+  display: inline-block;
+  padding: 8px;
+  margin: 1px;
+  background-color: #ffffff;
+  cursor: pointer;
+  color: #5c1111;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 10px;
+}
+
+.guess-box {
+  display: inline-block;
+  border: 2px solid #ffffff;
+  margin-right: 5px;
+  position: relative;
+  background-color: #ffffff;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+#checkButton {
+  position: relative;
+  left: 9em;
+  top: -2em;
+  background-color: rgb(167, 128, 29);
+  padding: 0 4px;
+  display: none;
+}
+
+#input .container{
+  margin-top: 1.5em;
+  background-color: rgb(3, 44, 3);
+  border-radius: 20px;
+  margin-left: -10px;
+  height: 130px;
+  width: 370px;
+
+
+}
