@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pic Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body id="whole">
+    <audio id="backgroundAudio" src="audio/14 $2,000 Question.mp3" loop></audio>
+    <audio id="homeAudio" src="audio/10 Let's Play-mc.mp3"></audio>
+    <audio id="endAudio" src="audio/screen-20230921-172514-mc.mp3"></audio>
+    <audio id="correctAudio" src="audio/button-124476.mp3"></audio>
+    <audio id="errorAudio" src="audio/InShot_20230922_081512233-mc.mp3"></audio>
+    <audio id="laughAudio" src="audio/crowd_laughingwav-14578-mc (1).mp3"></audio>
+
+    
+
+    <div id="game">
+        
+        <div class="stats" id="statistics">
+            <span class="stat">Coins<img src="Images/images__19_-removebg-preview.png">: <strong><span id="coinText">0</span></strong></span>
+
+            
+        </div>
+        <div id="controls">
+            <button id="button1">Get Coins</button>
+            <button id="button2">Rules</button>
+            <button id="button3">Word Search</button>  
+        </div>
+
+         <div id="dictionary">
+            <input type="text" id="wordInput" placeholder="Enter a word">
+            <button id="searchButton">Search</button>
+            <div id="results"></div>
+         </div>
+          
+            
+     
+        
+          
+        <div id="info">
+            <div class="container">
+                <p>
+                    
+                    <strong>USE COINS :</strong> The use coin button enables the player to get an answer for a word they are unable to guess. This feature would cost the player 50 coins for each answer given.
+                </p>
+            </div>
+
+            
+        </div>
+
+        
+       
+        <center>
+            <img src="Images/banner5.png"id="levelImg" width="40px"><span id="levelText">0</span>
+        </center>
+        
+        <center>
+            <div id="home">
+                <h2>Build Your IQ</h2>
+               
+                    <div class="proton">
+                       <img src="Images/brain.png" width="150px"height="220px">
+                        <div class="electron">
+                        <img src="Images/earth.png" height="80px"alt="">
+                        </div>
+                        
+                    </div>
+                    <img src="Images/Abstract-red-Ribbon-banner-on-transparent-PNG-removebg-preview.png"class="ribbon" alt=""> 
+                    <span class="slogan"><button class="slogan" id="slogan">PLAY</button></span>
+
+                
+            </div>
+            
+            
+
+        </center>
+       
+
+         
+        <div id="gameContainer"> 
+            
+            <center>
+                <div class="image-container" id="imageContainer">
+            </center>
+            
+            
+        </div>
+         
+
+        
+        <div id="input">
+              
+            <center>
+                <p id="resultMessage"></p>
+                <div id="guess-container" class="guess-container" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                <button id="checkButton"><img src="Images/submiticon-removebg-crop.png" width="20px" alt=""></button>
+
+                <div class="container">
+                    <div class="letter-container" id="letter-container" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <!-- Letters will be dynamically generated here -->
+                        </div>
+                         
+                           
+                            
+                            <button id="useCoin">Use Coin</button>
+                       
+    
+                </div>
+               
+            </center>
+            
+                
+                
+         </div>
+    </div>
+                
+    <div id="advertPage">
+        <div class="container">
+            <center>
+                <a href=""><button id="watchNow"><img src="images/375.png" width="80px" alt=""></button></a>
+    
+                <h4>Click to watch Ads and get 20 Coins for each Ad watched. <br>      Note: Watch Ads to the end to get reward.</h4>
+           
+            </center>
+           
+           
+    
+        </div>
+    
+    
+  <script src="script.js"></script>
+  
+</body>
+</html>
+
+
