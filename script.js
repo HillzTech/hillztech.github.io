@@ -228,6 +228,7 @@ function checkGuess() {
     
 
     if (currentLevel < levels.length) {
+      resultMsg.textContent = "";
       loadLevel(currentLevel);
       const letterContainer = document.getElementById('letter-container');
       letterContainer.innerHTML = ''; // Clear existing letters
